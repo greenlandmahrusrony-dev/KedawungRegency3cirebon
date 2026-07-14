@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KR3 Cirebon — Ruko Strategis, Siap Huni</title>
+<meta name="description" content="Ruko KR3 Cirebon. Lokasi strategis, DP ringan, siap huni. Konsultasi langsung via WhatsApp.">
+
+<!-- ============================================================
+  GANTI SEBELUM PUBLISH:
+  1. META_PIXEL_ID di bawah (baris ~30) — ganti "000000000000000" dengan Pixel ID asli
+  2. WA_NUMBER di script bawah (cari "6281234567890") — ganti nomor WA sales asli
+  3. Alamat di iframe Google Maps (cari "GANTI ALAMAT")
+  4. Blok foto placeholder (cari "GANTI: foto") — ganti dengan foto real unit/progress
+  5. Copy harga, promo, dan spek — sesuaikan dengan data terbaru
+============================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '000000000000000'); /* <-- GANTI PIXEL ID */
+fbq('track', 'PageView');
+</script>
+
+<style>
+  :root{
+    --bg: #F6F1E7;
+    --ink: #1C2B39;
+    --navy: #24384A;
+    --navy-light: #33506A;
+    --brass: #B8892B;
+    --brass-light: #D9B25C;
+    --brick: #9C4A34;
+    --brick-light: #B5654C;
+    --muted: #6B6357;
+    --line: #DCD1B8;
+    --paper: #FFFDF8;
+    --radius: 2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Public Sans', -apple-system, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:64px; /* space for sticky mobile bar */
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--navy);
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--brass); font-weight:700; margin-bottom:10px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .eyebrow::before{content:""; width:18px; height:1px; background:var(--brass);}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(246,241,231,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px; max-width:1080px; margin:0 auto;
+  }
+  .logo{
+    font-family:'Fraunces', serif; font-weight:700; font-size:19px;
+    color:var(--navy); letter-spacing:0.01em;
+  }
+  .logo span{color:var(--brass);}
+  .header-cta{
+    background:var(--brick); color:var(--paper);
+    padding:10px 18px; border-radius:var(--radius);
+    font-size:14px; font-weight:600; text-decoration:none;
+    white-space:nowrap;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:64px 0 48px;
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;
+  }
+  .hero h1{
+    font-size:44px; line-height:1.08; margin-bottom:18px;
+  }
+  .hero h1 em{
+    font-style:normal; color:var(--brass);
+  }
+  .hero p.lead{
+    font-size:17px; color:var(--muted); max-width:46ch; margin-bottom:28px;
+  }
+  .hero-stats{
+    display:flex; gap:28px; margin-top:36px; flex-wrap:wrap;
+  }
+  .hero-stat b{
+    display:block; font-family:'Fraunces', serif; font-size:26px; color:var(--navy);
+  }
+  .hero-stat span{
+    font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em;
+  }
+  .btn-primary{
+    display:inline-block; background:var(--brick); color:var(--paper);
+    padding:15px 30px; border-radius:var(--radius); font-weight:700; font-size:15px;
+    text-decoration:none; border:none; cursor:pointer;
+  }
+
+  /* blueprint illustration */
+  .blueprint{
+    background:var(--navy); border-radius:var(--radius); padding:28px;
+    position:relative; overflow:hidden;
+  }
+  .blueprint::before{
+    content:""; position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size:24px 24px;
+  }
+  .blueprint svg{position:relative; z-index:1; width:100%; height:auto;}
+  .blueprint-label{
+    position:relative; z-index:1; margin-top:14px;
+    font-size:11px; color:var(--brass-light); letter-spacing:0.08em; text-transform:uppercase;
+    display:flex; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.15); padding-top:10px;
+  }
+
+  /* ---------- TRUST BAR ---------- */
+  .trustbar{
+    background:var(--navy); color:var(--paper); padding:22px 0;
+  }
+  .trustbar .wrap{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px;
+  }
+  .trust-item{
+    display:flex; align-items:center; gap:10px; font-size:14px; flex:1; min-width:200px;
+  }
+  .trust-item .dot{
+    width:6px; height:6px; background:var(--brass); border-radius:50%; flex-shrink:0;
+  }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{padding:64px 0;}
+  .section-head{max-width:60ch; margin-bottom:36px;}
+  .section-head h2{font-size:30px;}
+  .section-head p{color:var(--muted); margin-top:10px; font-size:15.5px;}
+
+  /* ---------- FORM ---------- */
+  .form-section{
+    background:var(--paper); border:1px solid var(--line);
+    border-radius:var(--radius); padding:40px;
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:40px;
+  }
+  .form-side h2{font-size:26px; margin-bottom:12px;}
+  .form-side p{color:var(--muted); font-size:14.5px; margin-bottom:20px;}
+  .form-benefits{list-style:none;}
+  .form-benefits li{
+    display:flex; gap:10px; font-size:14px; color:var(--ink); margin-bottom:12px; align-items:flex-start;
+  }
+  .form-benefits li::before{
+    content:"✓"; color:var(--brass); font-weight:700; flex-shrink:0;
+  }
+  .field{margin-bottom:16px;}
+  .field label{
+    display:block; font-size:12.5px; font-weight:600; margin-bottom:6px; color:var(--navy);
+  }
+  .field input, .field select{
+    width:100%; padding:12px 14px; border:1px solid var(--line);
+    border-radius:var(--radius); font-size:15px; font-family:inherit;
+    background:var(--paper); color:var(--ink);
+  }
+  .field input:focus, .field select:focus{
+    outline:2px solid var(--brass); outline-offset:1px; border-color:var(--brass);
+  }
+  .btn-submit{
+    width:100%; background:var(--brick); color:var(--paper); border:none;
+    padding:16px; border-radius:var(--radius); font-weight:700; font-size:15.5px;
+    cursor:pointer; margin-top:6px;
+  }
+  .btn-submit:hover{background:var(--brick-light);}
+  .form-note{font-size:12px; color:var(--muted); margin-top:12px; text-align:center;}
+  .form-error{
+    display:none; background:#FBEAE6; color:var(--brick); font-size:13px;
+    padding:10px 12px; border-radius:var(--radius); margin-bottom:14px;
+  }
+
+  /* ---------- FACILITIES ---------- */
+  .facility-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  .facility-item{
+    background:var(--bg); padding:26px 22px;
+  }
+  .facility-item .num{
+    font-family:'Fraunces', serif; font-size:13px; color:var(--brass); font-weight:700;
+  }
+  .facility-item h3{font-size:16px; margin:8px 0 6px;}
+  .facility-item p{font-size:13.5px; color:var(--muted);}
+
+  /* photo placeholder */
+  .photo-strip{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-top:36px;
+  }
+  .photo-ph{
+    aspect-ratio:4/3; border-radius:var(--radius);
+    background:repeating-linear-gradient(45deg, var(--paper), var(--paper) 10px, var(--line) 10px, var(--line) 11px);
+    border:1px dashed var(--muted);
+    display:flex; align-items:center; justify-content:center;
+    font-size:11px; color:var(--muted); text-align:center; padding:10px;
+  }
+
+  /* ---------- LOCATION ---------- */
+  .location-wrap{
+    display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center;
+  }
+  .location-wrap iframe{
+    width:100%; height:320px; border:0; border-radius:var(--radius); filter:grayscale(0.15);
+  }
+  .location-list{list-style:none;}
+  .location-list li{
+    padding:12px 0; border-bottom:1px solid var(--line);
+    font-size:14.5px; display:flex; justify-content:space-between; gap:12px;
+  }
+  .location-list li span:first-child{color:var(--muted);}
+  .location-list li span:last-child{font-weight:600; color:var(--navy); text-align:right;}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--navy); color:rgba(255,255,255,0.65);
+    padding:36px 0; font-size:12.5px; text-align:center;
+  }
+  footer strong{color:var(--paper);}
+
+  /* ---------- STICKY WA (mobile) ---------- */
+  .sticky-wa{
+    position:fixed; left:0; right:0; bottom:0; z-index:60;
+    background:var(--brick); color:var(--paper);
+    display:none; align-items:center; justify-content:center; gap:10px;
+    padding:15px; font-weight:700; font-size:14.5px; text-decoration:none;
+  }
+  .pulse{
+    width:8px; height:8px; border-radius:50%; background:var(--brass-light);
+    box-shadow:0 0 0 0 rgba(217,178,92,0.7);
+    animation:pulse 1.8s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(217,178,92,0.6);}
+    70%{box-shadow:0 0 0 10px rgba(217,178,92,0);}
+    100%{box-shadow:0 0 0 0 rgba(217,178,92,0);}
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 860px){
+    .hero{grid-template-columns:1fr; padding-top:36px;}
+    .hero h1{font-size:32px;}
+    .form-section{grid-template-columns:1fr; padding:26px;}
+    .facility-grid{grid-template-columns:1fr 1fr;}
+    .location-wrap{grid-template-columns:1fr;}
+    .header-cta{display:none;}
+    .sticky-wa{display:flex;}
+    .photo-strip{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width: 520px){
+    .facility-grid{grid-template-columns:1fr;}
+    .hero-stats{gap:20px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .pulse{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Meta Pixel noscript fallback -->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=000000000000000&ev=PageView&noscript=1"/></noscript>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">KR3 <span>CIREBON</span></div>
+    <a href="#form" class="header-cta">Dapatkan Info Lengkap</a>
+  </div>
+</header>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero wrap" style="padding-top:56px;">
+    <div>
+      <div class="eyebrow">Ruko Komersial · Cirebon</div>
+      <h1>Ruko Strategis di Titik Ramai Cirebon, <em>Siap Huni</em></h1>
+      <p class="lead">Unit ruko 2 lantai dengan akses langsung ke jalur utama. Cocok untuk usaha maupun investasi sewa, dengan skema DP ringan dan proses cepat.</p>
+      <a href="#form" class="btn-primary">Konsultasi via WhatsApp →</a>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>2 Lt</b><span>Ruko Komersial</span></div>
+        <div class="hero-stat"><b>Ringan</b><span>Skema DP</span></div>
+        <div class="hero-stat"><b>Siap</b><span>Huni / Pakai</span></div>
+      </div>
+    </div>
+
+    <!-- signature blueprint illustration -->
+    <div class="blueprint">
+      <svg viewBox="0 0 320 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- shophouse elevation line drawing -->
+        <rect x="60" y="70" width="200" height="150" stroke="#D9B25C" stroke-width="1.5"/>
+        <line x1="60" y1="120" x2="260" y2="120" stroke="#D9B25C" stroke-width="1"/>
+        <!-- ground floor storefront -->
+        <rect x="78" y="150" width="60" height="70" stroke="#D9B25C" stroke-width="1.2"/>
+        <rect x="182" y="150" width="60" height="70" stroke="#D9B25C" stroke-width="1.2"/>
+        <rect x="150" y="180" width="20" height="40" stroke="#D9B25C" stroke-width="1"/>
+        <!-- upper floor windows -->
+        <rect x="80" y="90" width="34" height="24" stroke="#D9B25C" stroke-width="1"/>
+        <rect x="143" y="90" width="34" height="24" stroke="#D9B25C" stroke-width="1"/>
+        <rect x="206" y="90" width="34" height="24" stroke="#D9B25C" stroke-width="1"/>
+        <!-- roof -->
+        <polyline points="50,70 160,30 270,70" stroke="#D9B25C" stroke-width="1.5" fill="none"/>
+        <!-- dimension line -->
+        <line x1="60" y1="234" x2="260" y2="234" stroke="#B8892B" stroke-width="0.75"/>
+        <line x1="60" y1="228" x2="60" y2="240" stroke="#B8892B" stroke-width="0.75"/>
+        <line x1="260" y1="228" x2="260" y2="240" stroke="#B8892B" stroke-width="0.75"/>
+        <text x="145" y="250" fill="#B8892B" font-size="9" font-family="Public Sans, sans-serif">LEBAR ± 8M</text>
+        <!-- vertical dimension -->
+        <line x1="30" y1="30" x2="30" y2="220" stroke="#B8892B" stroke-width="0.75"/>
+        <text x="6" y="128" fill="#B8892B" font-size="9" font-family="Public Sans, sans-serif" transform="rotate(-90 10,128)">TINGGI 2 LT</text>
+      </svg>
+      <div class="blueprint-label">
+        <span>KR3 — Elevasi Depan</span>
+        <span>Skala Ilustratif</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRUST BAR ================= -->
+  <div class="trustbar">
+    <div class="wrap">
+      <div class="trust-item"><span class="dot"></span>Akses jalur utama Cirebon</div>
+      <div class="trust-item"><span class="dot"></span>Legalitas SHM / IMB lengkap</div>
+      <div class="trust-item"><span class="dot"></span>Proses booking cepat</div>
+      <div class="trust-item"><span class="dot"></span>Konsultasi langsung tim sales</div>
+    </div>
+  </div>
+
+  <!-- ================= FORM ================= -->
+  <section class="wrap" id="form">
+    <div class="form-section">
+      <div class="form-side">
+        <div class="eyebrow">Langkah Terakhir</div>
+        <h2>Isi Data Diri, Lanjut Chat WhatsApp</h2>
+        <p>Data ini membantu tim kami menyiapkan info unit &amp; simulasi yang paling sesuai sebelum ngobrol lebih lanjut di WhatsApp.</p>
+        <ul class="form-benefits">
+          <li>Info harga &amp; unit tersedia terbaru</li>
+          <li>Simulasi cicilan / DP sesuai budget</li>
+          <li>Jadwal survei lokasi langsung dengan sales</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="form-error" id="formError">Mohon lengkapi Nama dan Nomor WhatsApp dengan benar.</div>
+        <form id="leadForm">
+          <div class="field">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama Anda" required>
+          </div>
+          <div class="field">
+            <label for="wa">Nomor WhatsApp</label>
+            <input type="tel" id="wa" name="wa" placeholder="08xxxxxxxxxx" required>
+          </div>
+          <div class="field">
+            <label for="minat">Minat Unit</label>
+            <select id="minat" name="minat">
+              <option value="Ruko KR3 - Belum tahu tipe">Belum tahu tipe, mau tanya-tanya dulu</option>
+              <option value="Ruko KR3 - Tipe Standar">Tipe Standar</option>
+              <option value="Ruko KR3 - Tipe Sudut / Hook">Tipe Sudut / Hook</option>
+              <option value="Ruko KR3 - Untuk Investasi">Untuk Investasi / Disewakan</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">Lanjut Chat di WhatsApp →</button>
+          <p class="form-note">Anda akan diarahkan ke WhatsApp resmi tim KR3 Cirebon</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FACILITIES ================= -->
+  <section class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Spesifikasi</div>
+      <h2>Yang Anda Dapatkan</h2>
+      <p>Dibangun untuk kebutuhan usaha maupun hunian komersial jangka panjang.</p>
+    </div>
+    <div class="facility-grid">
+      <div class="facility-item"><div class="num">01</div><h3>2 Lantai Penuh</h3><p>Lantai dasar untuk usaha, lantai atas fleksibel untuk kantor atau gudang.</p></div>
+      <div class="facility-item"><div class="num">02</div><h3>Akses Jalan Utama</h3><p>Berada di jalur ramai kendaraan, cocok untuk visibilitas usaha.</p></div>
+      <div class="facility-item"><div class="num">03</div><h3>Listrik &amp; Air Siap</h3><p>Instalasi dasar sudah tersedia, langsung bisa dipakai.</p></div>
+      <div class="facility-item"><div class="num">04</div><h3>Legalitas Jelas</h3><p>Dokumen SHM/IMB diurus lengkap sebelum serah terima.</p></div>
+      <div class="facility-item"><div class="num">05</div><h3>Skema Pembayaran</h3><p>DP ringan dengan opsi cicilan bertahap, disesuaikan kemampuan.</p></div>
+      <div class="facility-item"><div class="num">06</div><h3>Potensi Sewa</h3><p>Lokasi strategis mendukung nilai sewa untuk investasi jangka panjang.</p></div>
+    </div>
+
+    <div class="photo-strip">
+      <div class="photo-ph">GANTI: foto tampak depan ruko</div>
+      <div class="photo-ph">GANTI: foto progress bangunan</div>
+      <div class="photo-ph">GANTI: foto interior / denah</div>
+    </div>
+  </section>
+
+  <!-- ================= LOCATION ================= -->
+  <section class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Lokasi</div>
+      <h2>Titik Strategis, Mudah Dijangkau</h2>
+    </div>
+    <div class="location-wrap">
+      <iframe src="https://www.google.com/maps?q=Cirebon&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- GANTI ALAMAT: ganti "Cirebon" di URL src di atas dengan alamat lengkap proyek -->
+      <ul class="location-list">
+        <li><span>Alamat</span><span>[GANTI: alamat lengkap]</span></li>
+        <li><span>Akses jalan</span><span>Jalur utama, 2 arah</span></li>
+        <li><span>Jarak pusat kota</span><span>[GANTI: estimasi menit]</span></li>
+        <li><span>Fasilitas sekitar</span><span>[GANTI: sekolah/pasar/dll]</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>KR3 Cirebon</strong> — Ruko Komersial Strategis</p>
+    <p style="margin-top:6px;">Halaman ini adalah materi pemasaran. Harga dan ketersediaan unit dapat berubah sewaktu-waktu, hubungi tim sales untuk info terkini.</p>
+  </div>
+</footer>
+
+<!-- Sticky WA bar (mobile) -->
+<a href="#form" class="sticky-wa"><span class="pulse"></span> Chat Sekarang di WhatsApp</a>
+
+<script>
+  // ====== GANTI NOMOR WA DI SINI ======
+  const WA_NUMBER = "6281234567890"; // format: 62 diikuti nomor tanpa angka 0 di depan, tanpa spasi/strip
+
+  const form = document.getElementById('leadForm');
+  const errorBox = document.getElementById('formError');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const nama = document.getElementById('nama').value.trim();
+    const wa = document.getElementById('wa').value.trim();
+    const minat = document.getElementById('minat').value;
+
+    // validasi sederhana
+    const waDigitsOnly = wa.replace(/\D/g,'');
+    if(nama.length < 2 || waDigitsOnly.length < 9){
+      errorBox.style.display = 'block';
+      return;
+    }
+    errorBox.style.display = 'none';
+
+    // fire Meta Pixel Lead event
+    if(typeof fbq === 'function'){
+      fbq('track', 'Lead', {
+        content_name: minat,
+        value: 0,
+        currency: 'IDR'
+      });
+    }
+
+    // susun pesan pre-filled ke WA
+    const pesan = `Halo, saya ${nama}. Saya tertarik dengan ${minat} dan ingin tanya-tanya lebih lanjut.`;
+    const waLink = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(pesan)}`;
+
+    // beri jeda singkat supaya event Pixel sempat terkirim sebelum redirect
+    setTimeout(function(){
+      window.location.href = waLink;
+    }, 300);
+  });
+</script>
+
+</body>
+</html>
